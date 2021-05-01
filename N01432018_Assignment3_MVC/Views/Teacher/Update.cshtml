@@ -1,0 +1,75 @@
+﻿@model N01432018_Assignment3_MVC.Models.Teacher
+@{
+    ViewBag.Title = "Update";
+}
+
+<div id="containershow">
+    <nav class="navbar-title">
+        <a class="navbarlink" href="/Teacher/Show/@Model.TeacherId">Back To List</a>
+    </nav>
+    <h2 class="info">Update Author</h2>
+    <div class="container-form">
+    <form name="addform" method="POST" action="/Teacher/Update/@Model.TeacherId" onsubmit="return UpdateTeacher()">
+        <div>
+            <label for="TeacherFname">Teacher Fname: </label>
+            <input type="text" name="TeacherFname" id="TeacherFname" value="@Model.TeacherFname" />
+        </div>
+        <div>
+            <label for="TeacherLname">Teacher Lname: </label>
+            <input type="text" name="TeacherLname" id="TeacherLname" value="@Model.TeacherLname" />
+        </div>
+        <div>
+            <label for="EmployeeNumber">EmployeeNumber:  </label>
+            <input type="text" name="EmployeeNumber" id="EmployeeNumber" value="@Model.EmployeeNumber" />
+        </div>
+        <div>
+            <label for="HireDate">Hire Date: </label>
+            <input type="datetime" name="HireDate" id="HireDate" value="@Model.HireDate" />
+        </div>
+        <div>
+            <label for="Salary">Salary: </label>
+            <input type="text" name="Salary" id="Salary" value="@Model.Salary" />
+        </div>
+        <div>
+            <input type="submit" name="Update" value="Update Teacher">
+        </div>
+    </form>
+</div>
+</div>
+<script>
+    function UpdateTeacher() {
+
+        // Client side validation
+        var firstname = document.getElementById("TeacherFname").value;
+        var lastname = document.getElementById("TeacherLname").value;
+        var employeenumber = document.getElementById("EmployeeNumber").value;
+        var hiredate = document.getElementById("HireDate").value;
+        var salary = document.getElementById("Salary").value;
+        if (firstname == "") {
+            alert("Enter Firstname");
+            return false;
+        }
+        else if (lastname == "") {
+            alert("Enter Lastname");
+            return false;
+        }
+        else if (employeenumber == "") {
+            alert("Enter Employeenumber");
+            return false;
+        }
+        else if (hiredate == "") {
+            alert("Enter Hiredate");
+            return false;
+        }
+        else if (salary == "") {
+            alert("Enter Salary");
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+</script>
+
+

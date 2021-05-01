@@ -1,0 +1,55 @@
+﻿body {
+    background-color:#ecdd7c;
+    max-width:100%;
+}
+
+.navbar-title {
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight:bold;
+    
+}
+.navbarlink{
+    padding:1em;
+}
+.info {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.container-form {
+    margin-top: 4em;
+    text-align: left;
+    line-height: 2em;
+}
+
+input[type="text"]{
+    margin-right:1em;
+}
+label{
+    margin-bottom:1em;
+    margin-right:1em;
+}
+input[type="submit"]{
+    margin-bottom:1em;
+    text-transform:uppercase;
+    background-color:forestgreen;
+    padding:0.5em;
+    font-weight:bold;
+}
+
+.show {
+    font-family:Calibri;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    background-color: forestgreen;
+    padding: 0.5em;
+    font-weight: bold;
+}
+

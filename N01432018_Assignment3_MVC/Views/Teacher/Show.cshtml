@@ -1,0 +1,32 @@
+﻿@model N01432018_Assignment3_MVC.Models.Teacher
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2 class="info">Showing Information of Teacher</h2>
+<div class="navbar-title">
+    <a class="navbarlink" href="/Teacher/List">Back </a>
+    <a class="navbarlink" href="/Teacher/DeleteTeacherConfirm/@Model.TeacherId"> Delete </a>
+    <a class="navbarlink" href="/Teacher/Update/@Model.TeacherId">Update</a>
+</div>
+
+<div class="show">
+    <div>Teacher FirstName : @Model.TeacherFname </div>
+    <div>Teacher LastName : @Model.TeacherLname </div>
+    <div>Employee Number : @Model.EmployeeNumber </div>
+    <div>HireDate :@Model.HireDate</div>
+    <div>Salary : @Model.Salary</div>
+    <div style="font-style:italic">Member Since @Model.HireDate.ToString("dd-MMM-yyyy")</div>
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+

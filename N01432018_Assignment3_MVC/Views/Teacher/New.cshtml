@@ -1,0 +1,53 @@
+﻿@model N01432018_Assignment3_MVC.Models.Teacher
+@{
+    ViewBag.Title = " New";
+}
+
+<h2 class="info">Add New Teacher</h2>
+
+<div class="navbar-title">
+    <a class="navbarlink" href="/Teacher/List">Back To List </a>
+</div>
+
+<form class="container-form" method="POST" action="/Teacher/Create" onsubmit="return ValidateTeacher()">
+    <div>
+        <label for="TeacherFname">Teacher Fname: </label>
+        <input type="text" name="TeacherFname" id="TeacherFname" />
+    </div>
+    <div>
+        <label for="TeacherLname">Teacher Lname: </label>
+        <input type="text" name="TeacherLname" id="TeacherLname" />
+    </div>
+    <div>
+        <label for="EmployeeNumber">EmployeeNumber:  </label>
+        <input type="text" name="EmployeeNumber" id="EmployeeNumber" />
+    </div>
+    <div>
+        <label for="HireDate">Hire Date: </label>
+        <input type="datetime" name="HireDate" id="HireDate" />
+    </div>
+    <div>
+        <label for="Salary">Salary: </label>
+        <input type="text" name="Salary" id="Salary" />
+    </div>
+    <div>
+        <input type="submit" name="Submit" value="Create Teacher">
+    </div>
+</form>
+
+<script>
+    function ValidateTeacher(){
+
+       // Client side validation
+        var fname = document.getElementById("TeacherFname").value;
+        var lname = document.getElementById("TeacherLname").value;
+        if (fname == "" && lname == "") {
+            alert("Enter Teacher first Name and last name");
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+</script>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<N01432018_Assignment3_MVC.Models.Class>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<h2>This page will view the information about Teachers</h2>
+
+@foreach (var classes in Model)
+{
+
+    <div>@classes.ClassId<a href="/Class/Show/@classes.ClassId">@classes.ClassName</a></div>
+
+
+
+}
+
+

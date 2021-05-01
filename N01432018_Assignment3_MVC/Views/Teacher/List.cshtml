@@ -1,0 +1,40 @@
+﻿@model IEnumerable<N01432018_Assignment3_MVC.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container-main">
+<h2 class="info">Information about Teachers</h2>
+</div>
+
+<div class="navbar-title">
+    <a class="navbarlink" href="/Teacher/New">New Teacher </a>
+</div>
+
+<div class="container-form">
+    <form action="/Teacher/List" method="get" id="form1">
+        <div>
+           <label for="Teachername">Teacher Name :</label>
+           <input type="text" name="SearchKey" id="TeacherFname"/>
+        </div>
+        <div>
+            <label for="Salary">Salary: </label>
+            <input type="text" name="Number" />
+        </div>
+        <div>
+            <label for="Hiredate">Hire Date: </label>
+            <input type="text" name="Date" />
+        </div>
+        <div>
+            <input type="submit" value="Search" />
+        </div>
+    </form>
+</div>
+
+@foreach(var teacher in Model) {
+
+    <div>@teacher.TeacherId <a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a></div>
+}
+
+
+
